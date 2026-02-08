@@ -22,13 +22,9 @@ ask_user() {
 install_dependencies() {
   echo "Installing dependencies..."
   if type 'dnf' >/dev/null 2>&1; then
-    sudo dnf install -y arandr arc-theme bat fd-find feh fish galculator htop i3 jgmenu jq kitty lxappearance lxmenu-data lxrandr neofetch neovim nitrogen papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi xscreensaver zathura
+    sudo dnf install -y arandr arc-theme bat fd-find feh fish galculator htop i3 jgmenu jq kitty lxappearance lxmenu-data lxrandr fastfetch neovim papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi xscreensaver zathura
   elif type 'apt' >/dev/null 2>&1; then
-    sudo apt install -y arandr arc-theme bat fd-find feh fish galculator htop i3-wm jgmenu jq kitty lxappearance lxmenu-data lxrandr neofetch neovim nitrogen papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi suckless-tools xscreensaver xscreensaver-data-extra xscreensaver-gl-extra zathura
-  elif type 'pacman' >/dev/null 2>&1; then
-    sudo pacman -S --noconfirm arandr arc-gtk-theme bat fd feh fish galculator htop i3-wm jgmenu jq kitty lxappearance lxmenu-data lxrandr neofetch neovim nerd-fonts nitrogen papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi xscreensaver zathura zathura-pdf-mupdf
-  elif type 'zypper' >/dev/null 2>&1; then
-    sudo zypper in -y arandr bat fd feh fish galculator htop i3 jgmenu jq kitty lxappearance lxmenu-data lxrandr metatheme-arc-common neofetch neovim nitrogen papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi xscreensaver xscreensaver-data xscreensaver-data-extra zathura
+    sudo apt install -y arandr arc-theme bat fd-find feh fish galculator htop i3-wm jgmenu jq kitty lxappearance lxmenu-data lxrandr fastfetch neovim papirus-icon-theme pasystray pavucontrol picom playerctl polybar ranger ripgrep rofi suckless-tools xscreensaver xscreensaver-data-extra xscreensaver-gl-extra zathura
   else
     echo "Error: No supported package manager found!"
     return 1
